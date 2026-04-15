@@ -5874,10 +5874,10 @@
 
 	<script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
 
-	<script src="./script.js"></script>
+	<script src="./script.js" defer></script>
 </head>
 
-<body>
+<body style="background:#fff">
 	<div class="product-card">
 		<div class="product-card__product">
 			<div class="gallery">
@@ -5939,9 +5939,9 @@
 					</div>
 				</div>
 
-				<h3 class="product-subtitle">Описание:</h3>
+				<h3 class="product-subtitle tfm-desktop">Описание:</h3>
 
-				<p class="product-excerpt">
+				<p class="product-excerpt tfm-desktop">
 					Насосная станция Grundfos JP 4-47 PT-H — это идеальное оборудование для тех, кто ищет, где купить оригинальную
 					продукцию по доступной цене. Этот агрегат готов к подключению и эксплуатации, что делает его отличным выбором
 					для водоснабжения частных домов и садоводства. Насосная станция включает в себя самовсасывающий насос JP с
@@ -5952,11 +5952,11 @@
 					надежность в эксплуатации.
 				</p>
 
-				<a href="#" class="product-spec-link">Полное описание</a>
+				<a href="#" class="product-spec-link tfm-desktop">Полное описание</a>
 
-				<h3 class="product-subtitle">Характеристики:</h3>
+				<h3 class="product-subtitle tfm-desktop">Характеристики:</h3>
 
-				<ul class="product-short-specs">
+				<ul class="product-short-specs tfm-desktop">
 					<li class="product-spec">
 						<strong class="product-spec-name">Модель</strong>
 						<strong class="product-spec-value">JP 4-47 PT-H</strong>
@@ -5974,7 +5974,7 @@
 						<strong class="product-spec-value">1 год</strong>
 					</li>
 				</ul>
-				<a href="#" class="product-spec-link">Все характеристики</a>
+				<a href="#" class="product-spec-link tfm-desktop">Все характеристики</a>
 
 				<h3 class="product-subtitle">Способы доставки:</h3>
 
@@ -5993,7 +5993,7 @@
 			<div class="payment">
 
 				<div class="product-payment-card">
-					<div class="product-payment-header">
+					<div class="product-payment-header" data-da=".product-card__product,768,1">
 						<button type="button" class="product-id">
 							<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 								<path
@@ -6079,6 +6079,13 @@
 		<div class="product-details">
 			<div class="product-details__description">
 				<h2 class="product-details__title">Описание товара</h2>
+
+				<div class="product-details__excerpt">
+					Насосная станция Grundfos JP 4-47 PT-H — это идеальное оборудование для тех, кто ищет, где купить
+					оригинальную
+					продукцию по доступной цене. Этот агрегат готов к подключению и эксплуатации, что
+					делает его отличным выбором для водоснабжения частных домов и садоводства.
+				</div>
 
 				<div class="product-details__content">
 					<h2>Насосная станция Grundfos JP 4-47 PT-H — надежное решение для вашего водоснабжения</h2>
@@ -6213,7 +6220,7 @@
 						<span class="unfolded" style="display: none">Свернуть характеристики</span>
 					</button>
 				</div>
-				<div class="product-details__card">
+				<div class="product-details__card tfm-desktop">
 					<h2 class="product-details__title-small">Документация</h2>
 
 					<div class="product-details__docs">
@@ -6229,10 +6236,225 @@
 		</div>
 
 		<div class="product-reviews">
-			<form class="product-reviews__left"></form>
+			<form action="#" class="product-reviews__left">
+				<h2 class="product-reviews__title product-reviews__title_center">Оставить отзыв</h2>
+				<p class="product-reviews__text">Ваш e-mail не будет опубликован</p>
 
-			<ul class="product-reviews__reviews">
-			</ul>
+
+				<div class="product-reviews__rate">
+					<h3 class="product-reviews__rate-text">Ваша оценка:</h3>
+					<div class="rating" name="rate"></div>
+					<input type="text" class="rating-input" name="rating" placeholder=" " tabindex="-1" required>
+					<div class="product-reviews__rated" id="rate-value"></div>
+				</div>
+
+				<div class="product-reviews__fields">
+					<input class="product-reviews__field" placeholder="Имя" type="text" name="author">
+
+					<input class="product-reviews__field" placeholder="E-mail" type="email" name="email">
+
+					<textarea class="product-reviews__field" placeholder="Ваш отзыв" rows="4" name="comment"
+						id="comment"></textarea>
+
+					<label>
+						<input type="checkbox" name="" id="">
+						Я даю своё согласие на обработку моих <a href="#">персональных данных</a>
+					</label>
+				</div>
+
+				<button class="product-button product-button-filled" type="submit">Отправить</button>
+			</form>
+
+			<div class="product-reviews__reviews-slider">
+				<h2 class="product-reviews__title">Отзывы наших клиентов</h2>
+
+				<div class="product-reviews__slider-container">
+					<div class="swiper" id="reviews-slider">
+						<ul class="product-reviews__reviews swiper-wrapper">
+							<li class="swiper-slide">
+								<div class="product-review product-reviews__review">
+									<div class="product-review__author">Андрей Никитин</div>
+									<div class="product-review__rate" data-rate="5"></div>
+									<div class="product-review__review-wrapper">
+										<p class="product-review__body">
+											Эта насосная станция просто находка для моего дачного участка. Теперь не нужно постоянно таскать
+											воду
+											из
+											колодца. Установка включается автоматически, как только открываешь кран, что очень удобно. За
+											неделю
+											использования не было никаких проблем, вода подается стабильно. Уверен, что будет служить долго,
+											так
+											как
+											выглядит добротно и качественно.
+										</p>
+
+										<button class="product-review__unfold"><span>Развернуть</span> <svg width="14" height="8"
+												viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M12.4167 0.750001L6.58333 6.58333L0.75 0.75" stroke="#005674" stroke-width="1.5"
+													stroke-linecap="round" stroke-linejoin="round" />
+											</svg>
+										</button>
+									</div>
+
+									<small class="product-review__date">29.04.2023</small>
+								</div>
+							</li>
+							<li class="swiper-slide">
+								<div class="product-review product-reviews__review">
+									<div class="product-review__author">Андрей Никитин</div>
+									<div class="product-review__rate" data-rate="3"></div>
+									<div class="product-review__review-wrapper">
+										<p class="product-review__body">
+											Эта насосная станция просто находка для моего дачного участка. Теперь не нужно постоянно таскать
+											воду
+											из
+											колодца. Установка включается автоматически, как только открываешь кран, что очень удобно. За
+											неделю
+											использования не было никаких проблем, вода подается стабильно. Уверен, что будет служить долго,
+											так
+											как
+											выглядит добротно и качественно.
+										</p>
+
+										<button class="product-review__unfold"><span>Развернуть</span> <svg width="14" height="8"
+												viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M12.4167 0.750001L6.58333 6.58333L0.75 0.75" stroke="#005674" stroke-width="1.5"
+													stroke-linecap="round" stroke-linejoin="round" />
+											</svg>
+										</button>
+									</div>
+									<small class="product-review__date">29.04.2023</small>
+								</div>
+							</li>
+							<li class=" swiper-slide">
+								<div class="product-review product-reviews__review">
+									<div class="product-review__author">Андрей Никитин</div>
+									<div class="product-review__rate" data-rate="4"></div>
+									<div class="product-review__review-wrapper">
+										<p class="product-review__body">
+											Эта насосная станция просто находка для моего дачного участка. Теперь не нужно постоянно таскать
+											воду
+											из
+											колодца. Установка включается автоматически, как только открываешь кран, что очень удобно. За
+											неделю
+											использования не было никаких проблем, вода подается стабильно. Уверен, что будет служить долго,
+											так
+											как
+											выглядит добротно и качественно.
+										</p>
+
+										<button class="product-review__unfold"><span>Развернуть</span> <svg width="14" height="8"
+												viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M12.4167 0.750001L6.58333 6.58333L0.75 0.75" stroke="#005674" stroke-width="1.5"
+													stroke-linecap="round" stroke-linejoin="round" />
+											</svg>
+										</button>
+									</div>
+									<small class="product-review__date">29.04.2023</small>
+								</div>
+							</li>
+							<li class=" swiper-slide">
+								<div class="product-review product-reviews__review">
+									<div class="product-review__author">Андрей Никитин</div>
+									<div class="product-review__rate" data-rate="5"></div>
+									<div class="product-review__review-wrapper">
+										<p class="product-review__body">
+											Эта насосная станция просто находка для моего дачного участка. Теперь не нужно постоянно таскать
+											воду
+											из
+											колодца. Установка включается автоматически, как только открываешь кран, что очень удобно. За
+											неделю
+											использования не было никаких проблем, вода подается стабильно. Уверен, что будет служить долго,
+											так
+											как
+											выглядит добротно и качественно.
+										</p>
+
+										<button class="product-review__unfold"><span>Развернуть</span> <svg width="14" height="8"
+												viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M12.4167 0.750001L6.58333 6.58333L0.75 0.75" stroke="#005674" stroke-width="1.5"
+													stroke-linecap="round" stroke-linejoin="round" />
+											</svg>
+										</button>
+									</div>
+									<small class="product-review__date">29.04.2023</small>
+								</div>
+							</li>
+							<li class=" swiper-slide">
+								<div class="product-review product-reviews__review">
+									<div class="product-review__author">Андрей Никитин</div>
+									<div class="product-review__rate" data-rate="5"></div>
+									<div class="product-review__review-wrapper">
+										<p class="product-review__body">
+											Эта насосная станция просто находка для моего дачного участка. Теперь не нужно постоянно таскать
+											воду
+											из
+											колодца. Установка включается автоматически, как только открываешь кран, что очень удобно. За
+											неделю
+											использования не было никаких проблем, вода подается стабильно. Уверен, что будет служить долго,
+											так
+											как
+											выглядит добротно и качественно.
+										</p>
+
+										<button class="product-review__unfold"><span>Развернуть</span> <svg width="14" height="8"
+												viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M12.4167 0.750001L6.58333 6.58333L0.75 0.75" stroke="#005674" stroke-width="1.5"
+													stroke-linecap="round" stroke-linejoin="round" />
+											</svg>
+										</button>
+									</div>
+									<small class="product-review__date">29.04.2023</small>
+								</div>
+							</li>
+							<li class="swiper-slide">
+								<div class="product-review product-reviews__review">
+									<div class="product-review__author">Андрей Никитин</div>
+									<div class="product-review__rate" data-rate="3"></div>
+									<div class="product-review__review-wrapper">
+										<p class="product-review__body">
+											Эта насосная станция просто находка для моего дачного участка. Теперь не нужно постоянно таскать
+											воду
+											из
+											колодца. Установка включается автоматически, как только открываешь кран, что очень удобно. За
+											неделю
+											использования не было никаких проблем, вода подается стабильно. Уверен, что будет служить долго,
+											так
+											как
+											выглядит добротно и качественно.
+										</p>
+
+										<button class="product-review__unfold"><span>Развернуть</span> <svg width="14" height="8"
+												viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M12.4167 0.750001L6.58333 6.58333L0.75 0.75" stroke="#005674" stroke-width="1.5"
+													stroke-linecap="round" stroke-linejoin="round" />
+											</svg>
+										</button>
+									</div>
+									<small class="product-review__date">29.04.2023</small>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="product-reviews__control control-swiper">
+
+					<div class="control-swiper__progressbar" id="reviews-slider-progressbar"></div>
+
+					<button id="reviews-slider-prev" class="control-swiper__button control-swiper__prev">
+						<svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M6.58301 12.4167L0.749675 6.58333L6.58301 0.75" stroke="#005674" stroke-width="1.5"
+								stroke-linecap="round" stroke-linejoin="round" />
+						</svg>
+					</button>
+					<button id="reviews-slider-next" class="control-swiper__button control-swiper__next">
+						<svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M0.75 0.750081L6.58333 6.58341L0.75 12.4167" stroke="#005674" stroke-width="1.5"
+								stroke-linecap="round" stroke-linejoin="round" />
+						</svg></button>
+				</div>
+			</div>
 
 		</div>
 	</div>
@@ -6326,6 +6548,353 @@
 					</a>
 				</li>
 			</ul>
+		</div>
+	</div>
+
+	<div class="product-recommendations">
+		<div class="container">
+			<h2 class="product-recommendations__title">Хит продаж</h2>
+
+			<div class="swiper" id="product-recommendations-slider">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide tfm-product-card-small">
+						<div class="tfm-product-card-small__image-wrapper">
+							<div class="tfm-product-card-small__badge">ХИТ ПРОДАЖ!</div>
+							<img src="./image 7.png" alt="Насос скважинный Grundfos SQ 3-105 с кабелем"
+								class="tfm-product-card-small__image">
+						</div>
+
+						<div class="tfm-product-card-small__content">
+							<div class="tfm-product-card-small__availability">Есть в наличии</div>
+
+							<h3 class="tfm-product-card-small__title">
+								Насос скважинный Grundfos SQ 3-105 с кабелем
+							</h3>
+
+							<div class="tfm-product-card-small__rating">
+								<div class="tfm-product-card-small__rate rate-small" data-rate="3.5"></div>
+								<span class="tfm-product-card-small__reviews">10 отзывов</span>
+							</div>
+
+							<div class="tfm-product-card-small__footer">
+								<div class="tfm-product-card-small__price-block">
+									<div class="tfm-product-card-small__price">40 000 ₽</div>
+									<div class="tfm-product-card-small__old-price">65 000 ₽</div>
+								</div>
+
+								<button class="tfm-product-card-small__add-to-cart">
+									<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path
+											d="M2.75 3.25L4.83 3.61L5.793 15.083C5.87 16.02 6.653 16.739 7.593 16.736H18.502C19.399 16.738 20.16 16.078 20.287 15.19L21.236 8.632C21.342 7.899 20.833 7.219 20.101 7.113C20.037 7.104 5.164 7.099 5.164 7.099"
+											stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+										<path d="M14.125 10.7949H16.898" stroke="white" stroke-width="1.5" stroke-linecap="round"
+											stroke-linejoin="round" />
+										<path
+											d="M7.69835 20.7466C7.69835 20.4466 7.45535 20.2026 7.15435 20.2026C6.85335 20.2026 6.61035 20.4466 6.61035 20.7466C6.61035 21.0476 6.85335 21.2916 7.15435 21.2916C7.45535 21.2916 7.69835 21.0476 7.69835 20.7466Z"
+											fill="white" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+										<path fill-rule="evenodd" clip-rule="evenodd"
+											d="M18.4346 20.2026C18.7356 20.2026 18.9796 20.4466 18.9796 20.7466C18.9796 21.0476 18.7356 21.2916 18.4346 21.2916C18.1336 21.2916 17.8906 21.0476 17.8906 20.7466C17.8906 20.4466 18.1336 20.2026 18.4346 20.2026Z"
+											fill="white" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+									</svg>
+
+								</button>
+							</div>
+
+						</div>
+					</div>
+
+					<div class="swiper-slide tfm-product-card-small">
+						<div class="tfm-product-card-small__image-wrapper">
+							<div class="tfm-product-card-small__badge">ХИТ ПРОДАЖ!</div>
+							<img src="./image 7.png" alt="Насос скважинный Grundfos SQ 3-105 с кабелем"
+								class="tfm-product-card-small__image">
+						</div>
+
+						<div class="tfm-product-card-small__content">
+							<div class="tfm-product-card-small__availability">Есть в наличии</div>
+
+							<h3 class="tfm-product-card-small__title">
+								Насос скважинный Grundfos SQ 3-105 с кабелем
+							</h3>
+
+							<div class="tfm-product-card-small__rating">
+								<div class="tfm-product-card-small__rate rate-small" data-rate="3.5"></div>
+								<span class="tfm-product-card-small__reviews">10 отзывов</span>
+							</div>
+
+							<div class="tfm-product-card-small__footer">
+								<div class="tfm-product-card-small__price-block">
+									<div class="tfm-product-card-small__price">40 000 ₽</div>
+									<div class="tfm-product-card-small__old-price">65 000 ₽</div>
+								</div>
+
+								<button class="tfm-product-card-small__add-to-cart">
+									<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path
+											d="M2.75 3.25L4.83 3.61L5.793 15.083C5.87 16.02 6.653 16.739 7.593 16.736H18.502C19.399 16.738 20.16 16.078 20.287 15.19L21.236 8.632C21.342 7.899 20.833 7.219 20.101 7.113C20.037 7.104 5.164 7.099 5.164 7.099"
+											stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+										<path d="M14.125 10.7949H16.898" stroke="white" stroke-width="1.5" stroke-linecap="round"
+											stroke-linejoin="round" />
+										<path
+											d="M7.69835 20.7466C7.69835 20.4466 7.45535 20.2026 7.15435 20.2026C6.85335 20.2026 6.61035 20.4466 6.61035 20.7466C6.61035 21.0476 6.85335 21.2916 7.15435 21.2916C7.45535 21.2916 7.69835 21.0476 7.69835 20.7466Z"
+											fill="white" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+										<path fill-rule="evenodd" clip-rule="evenodd"
+											d="M18.4346 20.2026C18.7356 20.2026 18.9796 20.4466 18.9796 20.7466C18.9796 21.0476 18.7356 21.2916 18.4346 21.2916C18.1336 21.2916 17.8906 21.0476 17.8906 20.7466C17.8906 20.4466 18.1336 20.2026 18.4346 20.2026Z"
+											fill="white" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+									</svg>
+
+								</button>
+							</div>
+
+						</div>
+					</div>
+
+					<div class="swiper-slide tfm-product-card-small">
+						<div class="tfm-product-card-small__image-wrapper">
+							<div class="tfm-product-card-small__badge">ХИТ ПРОДАЖ!</div>
+							<img src="./image 7.png" alt="Насос скважинный Grundfos SQ 3-105 с кабелем"
+								class="tfm-product-card-small__image">
+						</div>
+
+						<div class="tfm-product-card-small__content">
+							<div class="tfm-product-card-small__availability">Есть в наличии</div>
+
+							<h3 class="tfm-product-card-small__title">
+								Насос скважинный Grundfos SQ 3-105 с кабелем
+							</h3>
+
+							<div class="tfm-product-card-small__rating">
+								<div class="tfm-product-card-small__rate rate-small" data-rate="3.5"></div>
+								<span class="tfm-product-card-small__reviews">10 отзывов</span>
+							</div>
+
+							<div class="tfm-product-card-small__footer">
+								<div class="tfm-product-card-small__price-block">
+									<div class="tfm-product-card-small__price">40 000 ₽</div>
+									<div class="tfm-product-card-small__old-price">65 000 ₽</div>
+								</div>
+
+								<button class="tfm-product-card-small__add-to-cart">
+									<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path
+											d="M2.75 3.25L4.83 3.61L5.793 15.083C5.87 16.02 6.653 16.739 7.593 16.736H18.502C19.399 16.738 20.16 16.078 20.287 15.19L21.236 8.632C21.342 7.899 20.833 7.219 20.101 7.113C20.037 7.104 5.164 7.099 5.164 7.099"
+											stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+										<path d="M14.125 10.7949H16.898" stroke="white" stroke-width="1.5" stroke-linecap="round"
+											stroke-linejoin="round" />
+										<path
+											d="M7.69835 20.7466C7.69835 20.4466 7.45535 20.2026 7.15435 20.2026C6.85335 20.2026 6.61035 20.4466 6.61035 20.7466C6.61035 21.0476 6.85335 21.2916 7.15435 21.2916C7.45535 21.2916 7.69835 21.0476 7.69835 20.7466Z"
+											fill="white" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+										<path fill-rule="evenodd" clip-rule="evenodd"
+											d="M18.4346 20.2026C18.7356 20.2026 18.9796 20.4466 18.9796 20.7466C18.9796 21.0476 18.7356 21.2916 18.4346 21.2916C18.1336 21.2916 17.8906 21.0476 17.8906 20.7466C17.8906 20.4466 18.1336 20.2026 18.4346 20.2026Z"
+											fill="white" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+									</svg>
+
+								</button>
+							</div>
+
+						</div>
+					</div>
+
+					<div class="swiper-slide tfm-product-card-small">
+						<div class="tfm-product-card-small__image-wrapper">
+							<div class="tfm-product-card-small__badge">ХИТ ПРОДАЖ!</div>
+							<img src="./image 7.png" alt="Насос скважинный Grundfos SQ 3-105 с кабелем"
+								class="tfm-product-card-small__image">
+						</div>
+
+						<div class="tfm-product-card-small__content">
+							<div class="tfm-product-card-small__availability">Есть в наличии</div>
+
+							<h3 class="tfm-product-card-small__title">
+								Насос скважинный Grundfos SQ 3-105 с кабелем
+							</h3>
+
+							<div class="tfm-product-card-small__rating">
+								<div class="tfm-product-card-small__rate rate-small" data-rate="3.5"></div>
+								<span class="tfm-product-card-small__reviews">10 отзывов</span>
+							</div>
+
+							<div class="tfm-product-card-small__footer">
+								<div class="tfm-product-card-small__price-block">
+									<div class="tfm-product-card-small__price">40 000 ₽</div>
+									<div class="tfm-product-card-small__old-price">65 000 ₽</div>
+								</div>
+
+								<button class="tfm-product-card-small__add-to-cart">
+									<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path
+											d="M2.75 3.25L4.83 3.61L5.793 15.083C5.87 16.02 6.653 16.739 7.593 16.736H18.502C19.399 16.738 20.16 16.078 20.287 15.19L21.236 8.632C21.342 7.899 20.833 7.219 20.101 7.113C20.037 7.104 5.164 7.099 5.164 7.099"
+											stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+										<path d="M14.125 10.7949H16.898" stroke="white" stroke-width="1.5" stroke-linecap="round"
+											stroke-linejoin="round" />
+										<path
+											d="M7.69835 20.7466C7.69835 20.4466 7.45535 20.2026 7.15435 20.2026C6.85335 20.2026 6.61035 20.4466 6.61035 20.7466C6.61035 21.0476 6.85335 21.2916 7.15435 21.2916C7.45535 21.2916 7.69835 21.0476 7.69835 20.7466Z"
+											fill="white" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+										<path fill-rule="evenodd" clip-rule="evenodd"
+											d="M18.4346 20.2026C18.7356 20.2026 18.9796 20.4466 18.9796 20.7466C18.9796 21.0476 18.7356 21.2916 18.4346 21.2916C18.1336 21.2916 17.8906 21.0476 17.8906 20.7466C17.8906 20.4466 18.1336 20.2026 18.4346 20.2026Z"
+											fill="white" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+									</svg>
+
+								</button>
+							</div>
+
+						</div>
+					</div>
+
+					<div class="swiper-slide tfm-product-card-small">
+						<div class="tfm-product-card-small__image-wrapper">
+							<div class="tfm-product-card-small__badge">ХИТ ПРОДАЖ!</div>
+							<img src="./image 7.png" alt="Насос скважинный Grundfos SQ 3-105 с кабелем"
+								class="tfm-product-card-small__image">
+						</div>
+
+						<div class="tfm-product-card-small__content">
+							<div class="tfm-product-card-small__availability">Есть в наличии</div>
+
+							<h3 class="tfm-product-card-small__title">
+								Насос скважинный Grundfos SQ 3-105 с кабелем
+							</h3>
+
+							<div class="tfm-product-card-small__rating">
+								<div class="tfm-product-card-small__rate rate-small" data-rate="3.5"></div>
+								<span class="tfm-product-card-small__reviews">10 отзывов</span>
+							</div>
+
+							<div class="tfm-product-card-small__footer">
+								<div class="tfm-product-card-small__price-block">
+									<div class="tfm-product-card-small__price">40 000 ₽</div>
+									<div class="tfm-product-card-small__old-price">65 000 ₽</div>
+								</div>
+
+								<button class="tfm-product-card-small__add-to-cart">
+									<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path
+											d="M2.75 3.25L4.83 3.61L5.793 15.083C5.87 16.02 6.653 16.739 7.593 16.736H18.502C19.399 16.738 20.16 16.078 20.287 15.19L21.236 8.632C21.342 7.899 20.833 7.219 20.101 7.113C20.037 7.104 5.164 7.099 5.164 7.099"
+											stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+										<path d="M14.125 10.7949H16.898" stroke="white" stroke-width="1.5" stroke-linecap="round"
+											stroke-linejoin="round" />
+										<path
+											d="M7.69835 20.7466C7.69835 20.4466 7.45535 20.2026 7.15435 20.2026C6.85335 20.2026 6.61035 20.4466 6.61035 20.7466C6.61035 21.0476 6.85335 21.2916 7.15435 21.2916C7.45535 21.2916 7.69835 21.0476 7.69835 20.7466Z"
+											fill="white" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+										<path fill-rule="evenodd" clip-rule="evenodd"
+											d="M18.4346 20.2026C18.7356 20.2026 18.9796 20.4466 18.9796 20.7466C18.9796 21.0476 18.7356 21.2916 18.4346 21.2916C18.1336 21.2916 17.8906 21.0476 17.8906 20.7466C17.8906 20.4466 18.1336 20.2026 18.4346 20.2026Z"
+											fill="white" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+									</svg>
+
+								</button>
+							</div>
+
+						</div>
+					</div>
+
+					<div class="swiper-slide tfm-product-card-small">
+						<div class="tfm-product-card-small__image-wrapper">
+							<div class="tfm-product-card-small__badge">ХИТ ПРОДАЖ!</div>
+							<img src="./image 7.png" alt="Насос скважинный Grundfos SQ 3-105 с кабелем"
+								class="tfm-product-card-small__image">
+						</div>
+
+						<div class="tfm-product-card-small__content">
+							<div class="tfm-product-card-small__availability">Есть в наличии</div>
+
+							<h3 class="tfm-product-card-small__title">
+								Насос скважинный Grundfos SQ 3-105 с кабелем
+							</h3>
+
+							<div class="tfm-product-card-small__rating">
+								<div class="tfm-product-card-small__rate rate-small" data-rate="3.5"></div>
+								<span class="tfm-product-card-small__reviews">10 отзывов</span>
+							</div>
+
+							<div class="tfm-product-card-small__footer">
+								<div class="tfm-product-card-small__price-block">
+									<div class="tfm-product-card-small__price">40 000 ₽</div>
+									<div class="tfm-product-card-small__old-price">65 000 ₽</div>
+								</div>
+
+								<button class="tfm-product-card-small__add-to-cart">
+									<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path
+											d="M2.75 3.25L4.83 3.61L5.793 15.083C5.87 16.02 6.653 16.739 7.593 16.736H18.502C19.399 16.738 20.16 16.078 20.287 15.19L21.236 8.632C21.342 7.899 20.833 7.219 20.101 7.113C20.037 7.104 5.164 7.099 5.164 7.099"
+											stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+										<path d="M14.125 10.7949H16.898" stroke="white" stroke-width="1.5" stroke-linecap="round"
+											stroke-linejoin="round" />
+										<path
+											d="M7.69835 20.7466C7.69835 20.4466 7.45535 20.2026 7.15435 20.2026C6.85335 20.2026 6.61035 20.4466 6.61035 20.7466C6.61035 21.0476 6.85335 21.2916 7.15435 21.2916C7.45535 21.2916 7.69835 21.0476 7.69835 20.7466Z"
+											fill="white" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+										<path fill-rule="evenodd" clip-rule="evenodd"
+											d="M18.4346 20.2026C18.7356 20.2026 18.9796 20.4466 18.9796 20.7466C18.9796 21.0476 18.7356 21.2916 18.4346 21.2916C18.1336 21.2916 17.8906 21.0476 17.8906 20.7466C17.8906 20.4466 18.1336 20.2026 18.4346 20.2026Z"
+											fill="white" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+									</svg>
+
+								</button>
+							</div>
+
+						</div>
+					</div>
+
+					<div class="swiper-slide tfm-product-card-small">
+						<div class="tfm-product-card-small__image-wrapper">
+							<div class="tfm-product-card-small__badge">ХИТ ПРОДАЖ!</div>
+							<img src="./image 7.png" alt="Насос скважинный Grundfos SQ 3-105 с кабелем"
+								class="tfm-product-card-small__image">
+						</div>
+
+						<div class="tfm-product-card-small__content">
+							<div class="tfm-product-card-small__availability">Есть в наличии</div>
+
+							<h3 class="tfm-product-card-small__title">
+								Насос скважинный Grundfos SQ 3-105 с кабелем
+							</h3>
+
+							<div class="tfm-product-card-small__rating">
+								<div class="tfm-product-card-small__rate rate-small" data-rate="3.5"></div>
+								<span class="tfm-product-card-small__reviews">10 отзывов</span>
+							</div>
+
+							<div class="tfm-product-card-small__footer">
+								<div class="tfm-product-card-small__price-block">
+									<div class="tfm-product-card-small__price">40 000 ₽</div>
+									<div class="tfm-product-card-small__old-price">65 000 ₽</div>
+								</div>
+
+								<button class="tfm-product-card-small__add-to-cart">
+									<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path
+											d="M2.75 3.25L4.83 3.61L5.793 15.083C5.87 16.02 6.653 16.739 7.593 16.736H18.502C19.399 16.738 20.16 16.078 20.287 15.19L21.236 8.632C21.342 7.899 20.833 7.219 20.101 7.113C20.037 7.104 5.164 7.099 5.164 7.099"
+											stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+										<path d="M14.125 10.7949H16.898" stroke="white" stroke-width="1.5" stroke-linecap="round"
+											stroke-linejoin="round" />
+										<path
+											d="M7.69835 20.7466C7.69835 20.4466 7.45535 20.2026 7.15435 20.2026C6.85335 20.2026 6.61035 20.4466 6.61035 20.7466C6.61035 21.0476 6.85335 21.2916 7.15435 21.2916C7.45535 21.2916 7.69835 21.0476 7.69835 20.7466Z"
+											fill="white" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+										<path fill-rule="evenodd" clip-rule="evenodd"
+											d="M18.4346 20.2026C18.7356 20.2026 18.9796 20.4466 18.9796 20.7466C18.9796 21.0476 18.7356 21.2916 18.4346 21.2916C18.1336 21.2916 17.8906 21.0476 17.8906 20.7466C17.8906 20.4466 18.1336 20.2026 18.4346 20.2026Z"
+											fill="white" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+									</svg>
+
+								</button>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="product-recommendations__control control-swiper">
+				<div class="control-swiper__progressbar" id="recommendations-slider-progressbar"></div>
+				<button id="recommendations-slider-prev" class="control-swiper__button control-swiper__prev">
+					<svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M6.58301 12.4167L0.749675 6.58333L6.58301 0.75" stroke="#005674" stroke-width="1.5"
+							stroke-linecap="round" stroke-linejoin="round" />
+					</svg>
+				</button>
+				<button id="recommendations-slider-next" class="control-swiper__button control-swiper__next">
+					<svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M0.75 0.750081L6.58333 6.58341L0.75 12.4167" stroke="#005674" stroke-width="1.5"
+							stroke-linecap="round" stroke-linejoin="round" />
+					</svg></button>
+			</div>
 		</div>
 	</div>
 

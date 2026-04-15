@@ -1,0 +1,80 @@
+@use "vars";
+
+.rating {
+	position: relative;
+	display: inline-block;
+	cursor: pointer;
+	user-select: none;
+	width: 140px;
+	height: 28px;
+}
+
+.rating::before {
+	content: url('/assets/empty.svg');
+	color: #ddd;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+
+.rating::after {
+	content: url('/assets/filled.svg');
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	width: var(--percent, 0%);
+	overflow: hidden;
+}
+
+.rating-input.rating-input,
+.rating-input.rating-input:focus {
+	border: none;
+	background-color: #fff;
+	outline: none;
+	pointer-events: none;
+	max-width: 33px;
+	padding: 4px;
+	text-align: center;
+	font-weight: 700;
+	border-radius: 8px;
+	caret-color: transparent;
+}
+
+.rating-input.rating-input:placeholder-shown {
+	background-color: transparent;
+}
+
+[data-rate] {
+
+	position: relative;
+	width: 120px;
+	height: 24px;
+
+	&.rate-small {
+		transform: scale(0.5) translateX(-50%);
+		margin-right: -40px;
+	}
+
+	&::before {
+		content: url('/assets/empty.svg');
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+
+	&::after {
+		content: url('/assets/filled.svg');
+		overflow: hidden;
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+
+	@for $i from 1 through 10 {
+		&[data-rate="#{$i * 0.5}"]::after {
+			width: $i * 0.5 * 28px;
+		}
+	}
+}

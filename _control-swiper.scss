@@ -1,0 +1,60 @@
+@use "vars";
+
+.control-swiper {
+	display: flex;
+	gap: 8px;
+	align-items: center;
+	margin-top: 20px;
+
+	@media (max-width: vars.$tablet) {
+		gap: 16px;
+	}
+
+	&__progressbar {
+		width: 100%;
+		height: 2px;
+		flex-grow: 1;
+		position: relative !important;
+		background-color: rgba(#364356, 8%) !important;
+
+		.swiper-pagination-progressbar-fill.swiper-pagination-progressbar-fill {
+			background-color: #005773;
+		}
+
+	}
+
+	&__prev {
+		margin-left: 16px;
+
+		@media (max-width: vars.$tablet) {
+			order: -1;
+		}
+	}
+
+	&__button {
+
+		&,
+		&:focus {
+			border-radius: 999px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			padding: 0;
+			flex-basis: 36px;
+			flex-shrink: 0;
+			height: 36px;
+			background-color: #f1f1f1;
+			border: none;
+			transition: all .1s;
+		}
+
+		&:hover,
+		&:focus:hover {
+			background-color: #005773;
+
+			svg * {
+				stroke: #f1f1f1;
+			}
+		}
+	}
+}

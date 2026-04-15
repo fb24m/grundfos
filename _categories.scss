@@ -52,4 +52,10 @@ $gray: #7b7b7b;
 			line-height: 115%;
 		}
 	}
+
+	&__image {
+		width: 60px;
+		height: 60px;
+		object-fit: cover;
+	}
 }

@@ -6110,7 +6110,10 @@
 					</blockquote>
 				</div>
 
-				<button class="product-button product-details__show-more-button">Развернуть описание</button>
+				<button class="product-button product-details__show-more-button" data-unfold=".product-details__content">
+					<span class="folded">Развернуть описание</span>
+					<span class="unfolded" style="display: none">Свернуть описание</span>
+				</button>
 			</div>
 			<div class="product-details__specs">
 				<div class="product-details__card">
@@ -6179,19 +6182,22 @@
 						</li>
 					</ul>
 
-					<button class="product-button product-details__show-more-button">Развернуть характеристики</button>
+					<button class="product-button product-details__show-more-button" data-unfold=".product-details__specs-list">
+						<span class="folded">Развернуть характеристики</span>
+						<span class="unfolded" style="display: none">Свернуть характеристики</span>
+					</button>
 				</div>
 				<div class="product-details__card">
 					<h2 class="product-details__title-small">Документация</h2>
 
 					<div class="product-details__docs">
-					<a class="product-details__doc-link"
-						href="https://grundfos-official.ru/wp-content/uploads/2025/12/765903b5682ef35faa78b1da0ff9efe9.pdf">Руководство
-						пользователя для насосной станции Grundfos JP PT (pdf, 3,44 МБ)</a>
-					<a class="product-details__doc-link"
-						href="https://grundfos-official.ru/wp-content/uploads/2025/12/824c074d1b25506a339bd2b884e34f63.pdf">Руководство
-						по установке Grundfos JP PT (pdf, 8,42 МБ)</a>
-						</div>
+						<a class="product-details__doc-link"
+							href="https://grundfos-official.ru/wp-content/uploads/2025/12/765903b5682ef35faa78b1da0ff9efe9.pdf">Руководство
+							пользователя для насосной станции Grundfos JP PT (pdf, 3,44 МБ)</a>
+						<a class="product-details__doc-link"
+							href="https://grundfos-official.ru/wp-content/uploads/2025/12/824c074d1b25506a339bd2b884e34f63.pdf">Руководство
+							по установке Grundfos JP PT (pdf, 8,42 МБ)</a>
+					</div>
 				</div>
 			</div>
 		</div>

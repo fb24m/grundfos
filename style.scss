@@ -1,10 +1,18 @@
 @use "sass:color";
 
+@forward "./categories";
+
 $blue: #1E293B;
 $accent: #005773;
 $black: #364356;
 $gray: #7b7b7b;
 
+
+.container {
+	max-width: 1690px;
+	padding: 0 15px;
+	margin: 0 auto;
+}
 
 .product-short-specs {
 	list-style: none;

@@ -1,7 +1,23 @@
 document.addEventListener('DOMContentLoaded', () => {
 	const previewsSlider = new Swiper('.previews-slider', {
-		slidesPerView: 5,
+		slidesPerView: 4.5,
 		spaceBetween: 8,
+
+		navigation: {
+			nextEl: '#previews-button-next'
+		},
+
+		breakpoints: {
+			480: {
+				slidesPerView: 5
+			},
+			640: {
+				slidesPerView: 7
+			},
+			1440: {
+				slidesPerView: 6
+			}
+		}
 	})
 
 	new Swiper('.main-slider', {
@@ -89,23 +105,8 @@ document.addEventListener('DOMContentLoaded', () => {
 			return value;
 		}
 
-		rating.addEventListener('mousemove', e => {
-			const value = getValue(e);
-			const percent = (value / 5) * 100;
-			rating.style.setProperty('--percent', percent + '%');
-		});
-
 		rating.addEventListener('click', e => {
 			setRating(getValue(e));
-		});
-
-		rating.addEventListener('mouseleave', () => {
-			if (input.value) {
-				setRating(parseFloat(input.value));
-			}
-			else {
-				setRating(parseFloat(0), true);
-			}
 		});
 	});
 
@@ -187,6 +188,20 @@ document.addEventListener('DOMContentLoaded', () => {
 	})
 })
 
+document.addEventListener('DOMContentLoaded', () => {
+	const copyButtons = document.querySelector('[data-copy]')
+	const originalContent = copyButtons.innerHTML
+
+	copyButtons.addEventListener('click', () => {
+		navigator.clipboard.writeText(copyButtons.dataset.copy)
+
+		copyButtons.innerHTML = 'Скопировано!'
+
+		setTimeout(() => {
+			copyButtons.innerHTML = originalContent
+		}, 1000)
+	})
+})
 
 function moveOnBreakpoint(elementSelector, targetSelector, breakpoint = 768, order = 'last') {
 	const mq = window.matchMedia(`(max-width: ${breakpoint}px)`);

@@ -202,6 +202,23 @@ $gray: #7b7b7b;
 
 		.previews {
 			margin-top: 12px;
+			display: flex;
+			gap: 12px;
+
+			#previews-button-prev,
+			#previews-button-next {
+				flex-basis: 32px;
+				flex-shrink: 0;
+				background-color: rgba(#000, 2%);
+				border-radius: 20px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+
+				@media (max-width: vars.$tablet-s) {
+					display: none;
+				}
+			}
 
 			.swiper-slide {
 				position: relative;
@@ -255,6 +272,7 @@ $gray: #7b7b7b;
 			color: $black;
 
 			a {
+				font-weight: 400;
 				font-size: 14px;
 				color: $gray;
 				text-decoration: underline;
@@ -373,9 +391,11 @@ $gray: #7b7b7b;
 	.product-card__product .payment {
 		max-width: 380px;
 		flex-shrink: 0;
+		margin-left: 20px;
 
 		@media (max-width: vars.$laptop) {
 			max-width: 100%;
+			margin-left: 0;
 		}
 
 		.product-payment-card {
@@ -406,13 +426,14 @@ $gray: #7b7b7b;
 				font-weight: 700;
 				font-size: 32px;
 				color: $accent;
+				line-height: 125%;
 			}
 
 			.old-price {
 				font-size: 14px;
 				color: $gray;
 				text-decoration: line-through;
-				transform: translateY(5px);
+				transform: translateY(0px);
 			}
 
 			.buy-buttons {
@@ -452,6 +473,7 @@ $gray: #7b7b7b;
 
 			&-title {
 				font-weight: 700;
+				font-size: 16px;
 
 				@media (max-width: vars.$tablet) {
 					font-size: 14px;
@@ -460,6 +482,7 @@ $gray: #7b7b7b;
 
 			&-description {
 				margin: 0;
+				font-size: 14px;
 
 				@media (max-width: vars.$tablet) {
 					font-size: 12px;

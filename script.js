@@ -187,8 +187,17 @@ document.addEventListener('DOMContentLoaded', () => {
 	})
 })
 
-function moveOnBreakpoint(element, target, breakpoint = 768, order = 'last') {
+
+function moveOnBreakpoint(elementSelector, targetSelector, breakpoint = 768, order = 'last') {
 	const mq = window.matchMedia(`(max-width: ${breakpoint}px)`);
+
+	const element = document.querySelector(elementSelector)
+	const target = document.querySelector(targetSelector)
+
+	if (!element || !target) {
+		console.warn('element or target not found')
+		return
+	}
 
 	const originalParent = element.parentNode;
 	const originalNextSibling = element.nextElementSibling;
@@ -214,9 +223,8 @@ function moveOnBreakpoint(element, target, breakpoint = 768, order = 'last') {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-	const header = document.querySelector('.product-payment-header')
-	const target = document.querySelector('.product-card__product')
-	if (header && target) {
-		moveOnBreakpoint(header, target, 768, 'first')
-	}
+	moveOnBreakpoint('.product-payment-header', '.product-card__product', 768, 'first')
+	moveOnBreakpoint('#product-delivery', '.product-details', 768, 'last')
+	moveOnBreakpoint('.product-payment-advantages', '.product-details', 768, 'last')
+
 })

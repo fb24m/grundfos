@@ -58,14 +58,14 @@
 	}
 
 	&::before {
-		content: url('/assets/empty.svg');
+		content: url('./assets/empty.svg');
 		position: absolute;
 		top: 0;
 		left: 0;
 	}
 
 	&::after {
-		content: url('/assets/filled.svg');
+		content: url('./assets/filled.svg');
 		overflow: hidden;
 		position: absolute;
 		top: 0;

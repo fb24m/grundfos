@@ -96,6 +96,58 @@
 		flex-direction: column;
 		gap: 8px;
 		margin-top: 12px;
+
+		label {
+			display: flex;
+			gap: 12px;
+			align-items: flex-start;
+			margin-top: 4px;
+
+			span {
+				line-height: 125%;
+				font-size: 14px;
+			}
+
+			a {
+				color: #005773;
+				font-weight: 700;
+				text-decoration: underline;
+			}
+
+			input {
+				appearance: none;
+
+				outline: 0;
+				border: 0;
+				background-color: transparent !important;
+				position: relative;
+
+				&::before {
+					content: '';
+					display: inline-block;
+					width: 16px;
+					height: 16px;
+					border: #7b7b7b 2px solid;
+					border-radius: 2px;
+				}
+
+				&:checked::after {
+					content: '✔';
+					display: inline-block;
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: 16px;
+					height: 16px;
+					background-color: #005773;
+					color: #fff;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					border-radius: 2px;
+				}
+			}
+		}
 	}
 
 	&__field {

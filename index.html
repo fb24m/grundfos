@@ -5878,6 +5878,13 @@
 </head>
 
 <body style="background:#fff">
+	<ul class="breadcrumps container">
+		<li class="breadcrumps__item"><a href="#" class="breadcrumps__link">Главная</a></li>
+		<li class="breadcrumps__item"><a href="#" class="breadcrumps__link">Товары</a></li>
+		<li class="breadcrumps__item"><a href="#" class="breadcrumps__link">Насосное оборудование</a></li>
+		<li class="breadcrumps__item">Насосная станция Grundfos JP 4-47 PT-H</li>
+	</ul>
+
 	<div class="product-card">
 		<div class="product-card__product">
 			<div class="gallery">
@@ -5912,7 +5919,7 @@
 				<div class="previews">
 					<div class="swiper previews-slider">
 						<div class="swiper-wrapper">
-							<div class="swiper-slide"><img src="./slider-1.jpg" alt=""></div>
+							<div class="swiper-slide		"><img src="./slider-1.jpg" alt=""></div>
 							<div class="swiper-slide"><img src="./slider-2.jpg" alt=""></div>
 							<div class="swiper-slide"><img src="./slider-3.jpg" alt=""></div>
 							<div class="swiper-slide"><img src="./slider-4.jpg" alt=""></div>
@@ -6013,13 +6020,13 @@
 									stroke="#1E293B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
 							</svg>
 							Артикул: <strong>99463875</strong></button>
-						<button type="button" class="product-compare"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+						<a href="#" class="product-compare"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"
 								xmlns="http://www.w3.org/2000/svg">
 								<path
 									d="M7.5625 10.75H6.4375C6.23031 10.75 6.0625 10.9178 6.0625 11.125V15.625C6.0625 15.8322 6.23031 16 6.4375 16H7.5625C7.76969 16 7.9375 15.8322 7.9375 15.625V11.125C7.9375 10.9178 7.76969 10.75 7.5625 10.75ZM4.5625 13H3.4375C3.23031 13 3.0625 13.1678 3.0625 13.375V15.625C3.0625 15.8322 3.23031 16 3.4375 16H4.5625C4.76969 16 4.9375 15.8322 4.9375 15.625V13.375C4.9375 13.1678 4.76969 13 4.5625 13ZM10.5625 8.5H9.4375C9.23031 8.5 9.0625 8.66781 9.0625 8.875V15.625C9.0625 15.8322 9.23031 16 9.4375 16H10.5625C10.7697 16 10.9375 15.8322 10.9375 15.625V8.875C10.9375 8.66781 10.7697 8.5 10.5625 8.5ZM13.5625 6.25H12.4375C12.2303 6.25 12.0625 6.41781 12.0625 6.625V15.625C12.0625 15.8322 12.2303 16 12.4375 16H13.5625C13.7697 16 13.9375 15.8322 13.9375 15.625V6.625C13.9375 6.41781 13.7697 6.25 13.5625 6.25ZM16.5625 4H15.4375C15.2303 4 15.0625 4.16781 15.0625 4.375V15.625C15.0625 15.8322 15.2303 16 15.4375 16H16.5625C16.7697 16 16.9375 15.8322 16.9375 15.625V4.375C16.9375 4.16781 16.7697 4 16.5625 4Z"
 									fill="#1E293B" />
 							</svg>
-							В сравнение</button>
+							В сравнение</a>
 					</div>
 
 					<div class="price-block">
@@ -6028,8 +6035,11 @@
 							<span class="old-price">2 500 руб</span>
 						</div>
 						<div class="buy-buttons">
-							<button type="button" class="product-button">В корзину</button>
-							<button type="button" class="product-button product-button-filled">Купить</button>
+							<button type="button" class="product-button">В
+								корзину</button>
+							<button type="button" data-value-product-id="316"
+								class="awooc-custom-order button alt awooc-button-js awooc-custom-order-button wp-element-button no-stock-no-price"
+								id="awooc-custom-order-button-316">ЗАКАЗАТЬ</button>
 						</div>
 					</div>
 
@@ -6260,16 +6270,18 @@
 				</div>
 
 				<div class="product-reviews__fields">
-					<input class="product-reviews__field" placeholder="Имя" type="text" name="author">
+					<input class="product-reviews__field" placeholder="Имя" type="text" name="author" required>
 
-					<input class="product-reviews__field" placeholder="E-mail" type="email" name="email">
+					<input class="product-reviews__field" placeholder="E-mail" type="email" name="email" required>
 
-					<textarea class="product-reviews__field" placeholder="Ваш отзыв" rows="4" name="comment"
-						id="comment"></textarea>
+					<textarea class="product-reviews__field" placeholder="Ваш отзыв" rows="4" name="comment" id="comment"
+						required></textarea>
 
 					<label>
-						<input type="checkbox" name="" id="">
-						Я даю своё согласие на обработку моих <a href="#">персональных данных</a>
+						<input type="checkbox" name="" id="" required>
+						<span>
+							Я даю своё согласие на обработку моих <a href="#">персональных данных</a>
+						</span>
 					</label>
 				</div>
 
@@ -6579,7 +6591,9 @@
 							<div class="tfm-product-card-small__availability">Есть в наличии</div>
 
 							<h3 class="tfm-product-card-small__title">
-								Насос скважинный Grundfos SQ 3-105 с кабелем
+								<a href="#">
+									Насос скважинный Grundfos SQ 3-105 с кабелем
+								</a>
 							</h3>
 
 							<div class="tfm-product-card-small__rating">
@@ -6593,7 +6607,8 @@
 									<div class="tfm-product-card-small__old-price">65 000 ₽</div>
 								</div>
 
-								<button class="tfm-product-card-small__add-to-cart">
+								<button
+									class="tfm-product-card-small__add-to-cart product-button product-button-small product-button-filled loading">
 									<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 										<path
 											d="M2.75 3.25L4.83 3.61L5.793 15.083C5.87 16.02 6.653 16.739 7.593 16.736H18.502C19.399 16.738 20.16 16.078 20.287 15.19L21.236 8.632C21.342 7.899 20.833 7.219 20.101 7.113C20.037 7.104 5.164 7.099 5.164 7.099"
@@ -6855,7 +6870,9 @@
 							<div class="tfm-product-card-small__availability">Есть в наличии</div>
 
 							<h3 class="tfm-product-card-small__title">
-								Насос скважинный Grundfos SQ 3-105 с кабелем
+								<a href="#">
+									Насос скважинный Grundfos SQ 3-105 с кабелем
+								</a>
 							</h3>
 
 							<div class="tfm-product-card-small__rating">

@@ -1,4 +1,5 @@
-document.addEventListener('DOMContentLoaded', () => {
+
+function initGallery() {
 	const previewsSlider = new Swiper('.previews-slider', {
 		slidesPerView: 4.5,
 		spaceBetween: 8,
@@ -74,6 +75,13 @@ document.addEventListener('DOMContentLoaded', () => {
 			img.style.transform = 'scale(1)';
 			img.style.transformOrigin = 'center';
 		});
+	});
+}
+
+window.addEventListener('load', () => {
+	requestAnimationFram
+	e(() => {
+		requestAnimationFrame(initGallery);
 	});
 })
 
@@ -242,4 +250,16 @@ document.addEventListener('DOMContentLoaded', () => {
 	moveOnBreakpoint('#product-delivery', '.product-details', 768, 'last')
 	moveOnBreakpoint('.product-payment-advantages', '.product-details', 768, 'last')
 
+})
+
+
+document.addEventListener('DOMContentLoaded', () => {
+	const breadcrumps = document.querySelectorAll('.breadcrumps')
+
+	breadcrumps.forEach((item) => {
+		item.scrollBy({
+			left: 99999,
+			behavior: 'smooth'
+		})
+	})
 })

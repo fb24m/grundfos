@@ -1,0 +1,40 @@
+@use "vars";
+
+.breadcrumps {
+	display: flex;
+	list-style: none;
+	gap: 0 4px;
+	white-space: nowrap;
+	flex-wrap: wrap;
+
+	&.breadcrumps {
+		margin-bottom: 32px;
+
+		@media (max-width: vars.$mobile-l) {
+			margin-bottom: 24px;
+		}
+	}
+
+
+	&__item {
+		color: #1E293B;
+		font-size: 12px;
+	}
+
+	&__link {
+		color: #1E293B;
+		display: flex;
+		gap: 4px;
+		font-weight: 700;
+		text-decoration: underline;
+
+		&:hover {
+			text-decoration: none;
+		}
+
+		&::after {
+			content: url('./assets/arrow.svg');
+			transform: translateY(2px);
+		}
+	}
+}

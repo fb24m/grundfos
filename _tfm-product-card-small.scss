@@ -65,9 +65,17 @@
 			background-color: #77A464;
 			border-radius: 999px;
 		}
+
+		&.not-available {
+			color: #ff3b3e;
+
+			&::before {
+				background-color: #ff3b3e;
+			}
+		}
 	}
 
-	&__title {
+	&__title a {
 		font-size: 20px;
 		line-height: 125%;
 		font-weight: 500;
@@ -77,6 +85,10 @@
 		-webkit-box-orient: vertical;
 		overflow: hidden;
 		margin-top: 4px;
+
+		&:hover {
+			text-decoration: underline;
+		}
 	}
 
 	&__rating {

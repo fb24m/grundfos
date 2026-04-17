@@ -12,7 +12,32 @@ $gray: #7b7b7b;
 @forward "./reviews";
 @forward "./control-swiper";
 @forward "./tfm-product-card-small";
+@forward "./product-button";
+@forward "./breadcrumps";
 
+span.swiper-pagination-progressbar-fill {
+	display: block;
+	height: 100%;
+	transform-origin: left;
+}
+
+.swiper {
+	width: 100%;
+}
+
+.product-page {
+	width: 100%;
+	background: #fff;
+	padding-top: 16px;
+}
+
+h1.entry-title.entry-title {
+	display: none;
+}
+
+.ast-single-entry-banner:has(.ast-breadcrumbs-wrapper) {
+	display: none;
+}
 
 .tfm-desktop .main {}
 
@@ -89,28 +114,8 @@ $gray: #7b7b7b;
 	}
 }
 
-.product-button {
-	border: $accent 2px solid;
-	border-radius: 12px;
-	padding: 16px 24px;
-	line-height: 100%;
-	background-color: transparent;
-	color: $accent;
-	font-weight: 700;
-	transition: all .3s;
-
-	&.product-button-filled {
-		background-color: $accent;
-		color: #fff;
-	}
-
-	&:hover {
-		background-color: color.adjust($accent, $lightness: 6%);
-	}
-
-	&:active {
-		background-color: color.adjust($accent, $lightness: -6%);
-	}
+a.added_to_cart.wc-forward.added_to_cart.wc-forward {
+	display: none;
 }
 
 .product-spec {
@@ -187,6 +192,16 @@ $gray: #7b7b7b;
 			top: 50%;
 			transform: translateY(-50%);
 			color: transparent;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 32px;
+			z-index: 999;
+			cursor: pointer;
+
+			&.swiper-button-next {
+				right: 0;
+			}
 
 			height: 100%;
 
@@ -204,6 +219,11 @@ $gray: #7b7b7b;
 			margin-top: 12px;
 			display: flex;
 			gap: 12px;
+			min-height: 75px;
+
+			@media (max-width: vars.$laptop) {
+				order: 1;
+			}
 
 			#previews-button-prev,
 			#previews-button-next {
@@ -239,11 +259,14 @@ $gray: #7b7b7b;
 		max-width: 540px;
 
 		@media (max-width: vars.$laptop) {
-			max-width: 400px;
+			max-width: 100%;
+			order: 3;
+			grid-column-start: 1;
+			grid-column-end: 3;
 		}
 
-		@media (max-width: vars.$laptop) {
-			max-width: 100%;
+		@media (max-width: vars.$tablet) {
+			grid-column-end: 1;
 		}
 
 		.product-tags {
@@ -299,14 +322,7 @@ $gray: #7b7b7b;
 		}
 
 		.gallery {
-			@media (max-width: vars.$laptop) {
-				grid-column-start: 1;
-				grid-column-end: 3;
-			}
 
-			@media (max-width: vars.$tablet) {
-				grid-column-end: 1;
-			}
 
 			.main-slider {
 				border-radius: 16px;
@@ -377,14 +393,13 @@ $gray: #7b7b7b;
 
 		justify-content: space-between;
 
-		button {
+		button,
+		a {
 			all: unset;
 			display: flex;
 			align-items: center;
 			gap: 4px;
 			color: $black;
-
-			@media (max-width: vars.$tablet) {}
 		}
 	}
 
@@ -402,6 +417,7 @@ $gray: #7b7b7b;
 			padding: 16px;
 			background-color: #f2f2f2;
 			border-radius: 16px;
+			order: 2;
 		}
 
 
@@ -497,6 +513,7 @@ $gray: #7b7b7b;
 		font-weight: 700;
 		font-size: 36px;
 		color: $blue;
+		line-height: 100%;
 
 		@media (max-width: vars.$tablet) {
 			font-size: 28px;
@@ -767,7 +784,7 @@ $gray: #7b7b7b;
 		text-decoration: underline;
 		display: flex;
 		gap: 5px;
-		line-height: 100%;
+		line-height: 115%;
 
 		&::before {
 			content: url('./assets/docs.svg');
